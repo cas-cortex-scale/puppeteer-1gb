@@ -1,24 +1,15 @@
-variable "credentials_path" {
+variable "subscription_id" {
   type        = string
-  description = "Path to credentials file"
+  description = "The subscription ID to be scanned"
+  default     = null
 }
 
-variable "project" {
-  type        = string
-  description = "The GCP project to be deployed to"
-}
-
-variable "region" {
-  default = "us-central1"
+variable "location" {
   type    = string
+  default = "East US"
 }
 
 variable "environment" {
   default     = "dev"
-  description = "The environment name"
-}
-
-variable "location" {
-  default = "us-central1c"
-  type    = string
+  description = "Must be all lowercase letters or numbers"
 }
